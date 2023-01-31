@@ -8,7 +8,7 @@ def get_url(i):
     url = '' #saves url
     
     #read no, url and format
-    urlDF = pd.read_csv('urls.csv')
+    urlDF = pd.read_csv('urls/urls.csv')
     
     if i+1 > len(urlDF):
         return [False]
