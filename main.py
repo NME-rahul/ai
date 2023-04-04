@@ -1,4 +1,4 @@
-import get_data as gd
+import get_info as gi
 import read_data as rd
 import plot
 
@@ -7,22 +7,23 @@ import os
 import sys
 #import threading
 
+Error0 = '\nError: No Url file exists'
 Error1 = '\nError: Unable to create threads.'
 Error2 = '\nError: Unable to initialize threads.'
 
 def work1():
-    i = 0
-    urlINFO = list()
-    
-    if os.path.exists('Data') != True:
-        os.system('mkdir Data')
-    
-    while True:
-        urlINFO = gd.get_url(i)
-        if urlINFO[0] == False:
-            break
-        gd.readWrite_url_data(urlINFO)
-        i = i + 1
+    print('''To scrap data from internet Create a txt file name with key.txt
+         and put kwywords and links each with new line character "\n"/enter''')
+    if os.path.exist('key.txt') == True:
+        with open('key.txt', 'w+') as fp:
+            wordds = []
+            while(True)
+                temp = temp + fp.read(1)
+                if temp[len(temp) - 1] == '\n':
+                    words.append(temp)
+                elif temp[len(temp) - 1] = '':
+                    break
+            infObj = gi.initialize(words)
 
 def work2():
     pass
